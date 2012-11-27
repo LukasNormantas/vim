@@ -1,9 +1,8 @@
 #!/bin/bash
-
+SCRIPT_DIR=$(dirname $(readlink -f $0))
+INITIAL_DIR=`pwd`
 cd ~
-#git clone git://github.com/foxfoo/git ~/vim
-#ln -s ~/vim/.vim ~/.vim
-#ln -s ~/vim/.vimrc ~/.vimrc
-#cd ~/vim
-#git submodule init
-#git submodule update
+rm -rf ~/.vim && ln -s $SCRIPT_DIR/.vim ~/.vim
+rm ~/.vimrc && ln -s $SCRIPT_DIR/.vimrc ~/.vimrc
+cd $SCRIPT_DIR
+git submodule update

@@ -1,3 +1,7 @@
+" Pathogen plugin to handle bundles.
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 set guioptions+=a
 set clipboard=unnamedplus
 
