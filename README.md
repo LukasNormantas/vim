@@ -5,7 +5,7 @@ and quickly install [VIM](http://www.vim.org/) configuration in any environment,
 without worrying about downloading plugins, .vimrc, etc.
 This repo consists of [.vimrc configuration file](.vimrc), and set of 
 [plugins](.vim/bundle) added to this repository 
-as git [submodules](.gitmodule).
+as git [submodules](.gitmodules).
 Also [an instalation script](install.sh)
 can be found in this here, what makes installling the configuration 
 stored in this repository very easy and convenient.
