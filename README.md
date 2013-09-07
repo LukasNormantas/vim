@@ -3,10 +3,10 @@
 The reason why this repository was created was to make it easy to store
 and quickly install [VIM](http://www.vim.org/) configuration in any environment, 
 without worrying about downloading plugins, .vimrc, etc.
-This repo consists of [.vimrc configuration file](./.vimrc), and set of 
-[plugins](./.vim/bundle) added to this repository 
-as git [submodules](./.gitmodule).
-Also [an instalation script](./install.sh)
+This repo consists of [.vimrc configuration file](.vimrc), and set of 
+[plugins](.vim/bundle) added to this repository 
+as git [submodules](.gitmodule).
+Also [an instalation script](install.sh)
 can be found in this here, what makes installling the configuration 
 stored in this repository very easy and convenient.
 
@@ -17,7 +17,7 @@ The idea was just have config files and links to plugin repositories
 stored in one place, and to be able to load the stored configuration 
 to any environment easily.
 This has been made possible using awesome plugin 
-[pathogen.vim](https://github.com/tpope/vim-pathogen), which allows
+[pathogen.vim](https://github.com/tpope/vim-pathogen), that allows
 to have plugin files organized in custom directory structure.
 
 ## Installation instructions
@@ -41,9 +41,10 @@ Then ensure modules have updated code:
 $ git submodule update
 ```
 
-**Warning:** this will overwrite existing VIM configuration, backup files
-must be saved if necessary!
-Now when we have all the required code, we may proceed with instaling it:
+**Warning:** following will overwrite existing VIM configuration, 
+backup files must be saved if necessary!
+
+When we have all the required code, we may proceed with instaling it:
 ```bash
 $ ./install.sh
 ```
