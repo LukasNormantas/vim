@@ -26,5 +26,11 @@ set listchars=tab:▸\ ,eol:¬
 " FuzzyFinder setup
 nmap ,b :FufBuffer **/<CR>
 nmap ,f :FufTaggedFile **/<CR>
+
 " Generates ctags for all files
 nmap <F12> !ctags -R --extra=+f --language-force=sh .<CR>
+
+" Toggle spell checking on and off with `,s`
+nmap <silent> <leader>s :set spell!<CR>
+" Set region to English
+set spelllang=en_us
