@@ -2,6 +2,8 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+set updatetime=400
+
 set autoindent
 set smartindent
 set expandtab
