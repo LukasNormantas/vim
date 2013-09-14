@@ -2,10 +2,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" Clipboard
-set guioptions+=a
-set clipboard=unnamedplus
-
 set autoindent
 set smartindent
 set expandtab
@@ -15,8 +11,9 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=0
 
-set number
-colorscheme peachpuff
+" Clipboard
+set guioptions+=a
+set clipboard=unnamedplus
 
 " Shortcut to rapidly toggle whitespaces
 nmap <leader>w :set list!<CR>
@@ -37,5 +34,6 @@ highlight clear SignColumn
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_us
 
-"Toggle line numbers
-nmap <silent> <leader>l :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+" Toggle line numbers
+nmap <silent> <leader>l :exec "se nu!"<CR>
+set number
