@@ -32,12 +32,15 @@ nmap ,f :FufTaggedFile **/<CR>
 nmap <leader>g :GitGutterToggle<CR>
 highlight clear SignColumn
 
+" Toggle word wrap
+nmap <silent> <leader>w :set wrap!<CR>
+
 " Toggle spell checking
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_us
 
 " Toggle line numbers
-nmap <silent> <leader>l :exec "se nu!"<CR>
+nmap <silent> <leader>l :set number!<CR>
 set number
 
 " To enable Alt key bindings
