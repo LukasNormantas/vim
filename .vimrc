@@ -25,12 +25,17 @@ set listchars=tab:▸\ ,eol:¬
 nmap <F12> !ctags -R --extra=+f --language-force=sh .<CR>
 
 " FuzzyFinder setup
-nmap ,b :FufBuffer **/<CR>
+nmap ,b :FufBuffer<CR>
 nmap ,f :FufTaggedFile **/<CR>
 
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
 highlight clear SignColumn
+
+" NerdTree
+nmap <leader>t :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen = 1
 
 " Toggle word wrap
 nmap <silent> <leader>w :set wrap!<CR>
