@@ -60,3 +60,8 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Sytastic - do not compile java files on save
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['foo', 'bar'],
+                           \ 'passive_filetypes': ['java'] }
