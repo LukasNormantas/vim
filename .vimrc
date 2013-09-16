@@ -23,7 +23,7 @@ nmap <leader>p :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 " Generates ctags for all files
-nmap <F12> !ctags -R --extra=+f --language-force=sh .<CR>
+nmap <F12> :!ctags -R --extra=+f --language-force=sh .<CR>
 
 " FuzzyFinder setup
 nmap <leader>b :FufBuffer<CR>
@@ -34,6 +34,7 @@ nmap <leader>g :GitGutterToggle<CR>
 highlight clear SignColumn
 
 " NerdTree
+nmap <leader>r :NERDTreeFind<CR>
 nmap <leader>t :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
