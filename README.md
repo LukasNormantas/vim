@@ -36,18 +36,14 @@ And go to the cloned directory:
 $ cd vim
 ```
 
-Then ensure modules have updated code:
-```bash
-$ git submodule update
-```
-
 **Warning:** following will overwrite existing VIM configuration, 
-backup files must be saved if necessary!
+however backup files will be created!
 
 When we have all the required code, we may proceed with instaling it:
 ```bash
 $ ./install.sh
 ```
+
 This script only has to be run once after checkout (although it is advised
 to run it everytime when this directory s moved to another location)
 
