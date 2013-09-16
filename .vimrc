@@ -12,6 +12,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set textwidth=0
+let mapleader=','
 
 " Clipboard
 set guioptions+=a
@@ -25,8 +26,8 @@ set listchars=tab:▸\ ,eol:¬
 nmap <F12> !ctags -R --extra=+f --language-force=sh .<CR>
 
 " FuzzyFinder setup
-nmap ,b :FufBuffer<CR>
-nmap ,f :FufTaggedFile **/<CR>
+nmap <leader>b :FufBuffer<CR>
+nmap <leader>f :FufTaggedFile **/<CR>
 
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
