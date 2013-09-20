@@ -14,11 +14,11 @@ Although there are some attempts to make a plugin manager for VIM,
 the goal of this setup is to keep contents of this repository simple 
 while providing a quick way to install and manage the configuration. 
 The idea was just have config files and links to plugin repositories
-stored in one place, and to be able to load the stored configuration 
+stored in one place, and enable to load the stored configuration 
 to any environment easily.
 This has been made possible using awesome plugin 
 [pathogen.vim](https://github.com/tpope/vim-pathogen), that allows
-to have plugin files organized in custom directory structure.
+having plugin files organized in custom directory structure.
 
 ## Installation instructions
 
@@ -28,7 +28,7 @@ otherwise it may be necessary to run install.sh again.
 
 First of all the package has to be retrieved from github:
 ```bash
-$ git clone git@github.com:lukoko/vim.git
+$ git clone git@github.com:LukasNormantas/vim.git
 ```
 
 And go to the cloned directory:
