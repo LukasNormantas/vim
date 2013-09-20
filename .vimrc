@@ -46,6 +46,10 @@ nmap <C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 
+" Tagbar
+nmap <leader>tt :TagbarToggle<CR>
+
+
 " Toggle word wrap
 nmap <silent> <leader>w :set wrap!<CR>
 
