@@ -25,9 +25,16 @@ set listchars=tab:▸\ ,eol:¬
 " Generates ctags for all files
 nmap <F12> :!ctags -R --extra=+f --language-force=sh .<CR>
 
-" FuzzyFinder setup
-nmap <leader>b :FufBuffer<CR>
-nmap <leader>f :FufTaggedFile **/<CR>
+" CtrlP setup
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_by_filename=1
+let g:ctrlp_regexp=1
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_dotfiles=1
+let g:ctrlp_custom_ignore=100000
+let g:ctrlp_max_files=30
+let g:ctrlp_match_window_reversed=0
 
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
