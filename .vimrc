@@ -46,9 +46,13 @@ nmap <C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 
+" NERDCommenter
+filetype plugin on
+:nmap <leader>/ <Plug>NERDCommenterToggle
+:vmap <leader>/ <Plug>NERDCommenterToggle
+
 " Tagbar
 nmap <leader>tt :TagbarToggle<CR>
-
 
 " Toggle word wrap
 nmap <silent> <leader>w :set wrap!<CR>
