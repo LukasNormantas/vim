@@ -2,6 +2,16 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" To enable Alt key bindings
+" http://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim
+let c='a'
+    while c <= 'z'
+    exec "set <A-".c.">=\e".c
+    exec "imap \e".c." <A-".c.">"
+    let c = nr2char(1+char2nr(c))
+endw
+set timeout ttimeoutlen=50
+
 set updatetime=400
 
 set autoindent
@@ -13,6 +23,7 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=0
 let mapleader=','
+filetype plugin on
 
 " Clipboard
 set guioptions+=a
@@ -35,6 +46,7 @@ let g:ctrlp_dotfiles=1
 let g:ctrlp_custom_ignore=100000
 let g:ctrlp_max_files=30
 let g:ctrlp_match_window_reversed=0
+nmap <A-p> :CtrlPTag<CR>
 
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
@@ -47,7 +59,6 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 
 " NERDCommenter
-filetype plugin on
 :nmap <leader>/ <Plug>NERDCommenterToggle
 :vmap <leader>/ <Plug>NERDCommenterToggle
 
@@ -65,15 +76,6 @@ set spelllang=en_us
 nmap <silent> <leader>l :set number!<CR>
 set number
 
-" To enable Alt key bindings
-" http://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
-set timeout ttimeoutlen=50
 
 " Pushing lines
 nnoremap <A-j> :m .+1<CR>==
