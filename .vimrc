@@ -12,7 +12,7 @@ let c='a'
 endw
 set timeout ttimeoutlen=50
 
-set updatetime=400
+set updatetime=1000 " too low wil cause artefacts!
 
 set autoindent
 set smartindent
@@ -37,14 +37,13 @@ set listchars=tab:▸\ ,eol:¬
 nmap <F12> :!ctags -R .<CR>
 
 " CtrlP setup
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_by_filename=1
-let g:ctrlp_regexp=1
+let g:ctrlp_regexp=0
 let g:ctrlp_working_path_mode=1
 let g:ctrlp_dotfiles=1
-let g:ctrlp_custom_ignore=100000
-let g:ctrlp_max_files=30
+let g:ctrlp_max_files=100000
 let g:ctrlp_match_window_reversed=0
 nmap <A-p> :CtrlPTag<CR>
 
@@ -76,7 +75,6 @@ set spelllang=en_us
 nmap <silent> <leader>l :set number!<CR>
 set number
 
-
 " Pushing lines
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -89,3 +87,8 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['foo', 'bar'],
                            \ 'passive_filetypes': ['java'] }
+
+set noautochdir " To make sure no plugin changes CWD
+
+" Prevents artefacts
+au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
