@@ -92,3 +92,8 @@ set noautochdir " To make sure no plugin changes CWD
 
 " Prevents artefacts
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
+
+" It is essential to export TERM=xterm-256color
+se t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
