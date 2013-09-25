@@ -51,6 +51,9 @@ nmap <A-p> :CtrlPTag<CR>
 nmap <leader>g :GitGutterToggle<CR>
 highlight clear SignColumn
 
+" Fugitive
+nmap <leader>gb :Gblame<CR>
+
 " NerdTree
 nmap <leader>e :NERDTreeFind<CR>
 nmap <leader>ee :NERDTreeToggle<CR>
