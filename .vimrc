@@ -53,7 +53,7 @@ highlight clear SignColumn
 
 " NerdTree
 nmap <leader>e :NERDTreeFind<CR>
-nmap <C-e> :NERDTreeToggle<CR>
+nmap <leader>ee :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 
