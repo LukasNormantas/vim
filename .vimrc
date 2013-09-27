@@ -24,6 +24,7 @@ set softtabstop=4
 set textwidth=0
 let mapleader=','
 filetype plugin on
+set wildmode=list:longest
 
 " Clipboard
 set guioptions+=a
