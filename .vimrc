@@ -104,3 +104,8 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 se t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
+
+" Include config file with customizations for local environment
+" (this file is ignored by Git).
+" Keep this line at the bottom of the file
+source <sfile>:h/.vimrc.local

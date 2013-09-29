@@ -12,7 +12,8 @@ git submodule init
 git submodule update
 
 cd ~
-rm -rf ~/.vim && ln -s $SCRIPT_DIR/.vim ~/.vim
-rm ~/.vimrc && ln -s $SCRIPT_DIR/.vimrc ~/.vimrc
+ln --backup -sn $SCRIPT_DIR/.vim ~/.vim
+ln --backup -s $SCRIPT_DIR/.vimrc ~/.vimrc
+ln --backup -s $SCRIPT_DIR/.vimrc.local ~/.vimrc.local
 
 cd $INITIAL_DIR

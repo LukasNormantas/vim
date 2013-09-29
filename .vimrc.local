@@ -1,0 +1,4 @@
+" This file is to be incuded into the main .vimrc,
+" but it is not supposed to be versioned.
+" It's purpose is to contain local settings for VIM, 
+" and customizations for local environment.
