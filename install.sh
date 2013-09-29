@@ -10,6 +10,7 @@ INITIAL_DIR=`pwd`
 cd $SCRIPT_DIR
 git submodule init
 git submodule update
+git update-index --assume-unchanged .vimrc.local
 
 cd ~
 ln --backup -sn $SCRIPT_DIR/.vim ~/.vim
