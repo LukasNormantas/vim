@@ -37,6 +37,9 @@ set listchars=tab:▸\ ,eol:¬
 " Generates ctags for all files
 nmap <F12> :!ctags -R .<CR>
 
+" For specific filetypes:
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " CtrlP setup
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP .'
