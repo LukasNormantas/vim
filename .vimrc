@@ -30,6 +30,10 @@ set wildmode=list:longest
 set guioptions+=a
 set clipboard=unnamedplus
 
+" put swp files into the tmp dir rather than next to the file!
+set backupdir=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
+set directory=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
+
 " Shortcut to rapidly toggle whitespaces
 nmap <leader>p :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
