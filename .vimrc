@@ -12,7 +12,9 @@ let c='a'
 endw
 set timeout ttimeoutlen=50
 
-set updatetime=1000 " too low wil cause artefacts!
+" keep following commented as it causes artefacts,
+" but it is essential for real-time git-gutter updates
+"set updatetime=1000 " too low wil cause artefacts!
 
 set autoindent
 set smartindent
