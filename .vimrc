@@ -28,6 +28,11 @@ let mapleader=','
 filetype plugin on
 set wildmode=list:longest
 
+" Cursor line and column selected
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+
 " Clipboard
 set guioptions+=a
 set clipboard=unnamedplus
