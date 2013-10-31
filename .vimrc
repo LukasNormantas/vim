@@ -104,10 +104,13 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Sytastic - do not compile java files on save
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['java'] }
+let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers = ['jshint']
 " When writing a file, if there are errors, have Syntastic plugin mark them
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_javascript_jslint_conf = "--nomen --vars --plusplus"
+let g:syntastic_javascript_jshint_conf = "~/.vim/jshint-conf.js"
 
 set noautochdir " To make sure no plugin changes CWD
 
