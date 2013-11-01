@@ -122,6 +122,8 @@ se t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
 
+source <sfile>:h/.vim/statusbar.vim
+
 " Include config file with customizations for local environment
 " (this file is ignored by Git).
 " Keep this line at the bottom of the file
