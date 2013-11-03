@@ -27,6 +27,7 @@ set textwidth=0
 let mapleader=','
 filetype plugin on
 set wildmode=list:longest
+set hlsearch
 
 " Cursor line and column selected
 au WinLeave * set nocursorline nocursorcolumn
