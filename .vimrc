@@ -55,6 +55,9 @@ nmap <F12> :!ctags -R .<CR>
 " For specific filetypes:
 au BufRead,BufNewFile *.md set filetype=markdown
 
+" Show buffer list
+:nnoremap <leader>b :buffers<CR>:buffer<Space>
+
 " CtrlP setup
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP .'
