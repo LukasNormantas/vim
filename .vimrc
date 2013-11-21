@@ -29,6 +29,8 @@ filetype plugin on
 set wildmode=list:longest
 set hlsearch
 syntax on
+nnoremap <CR> :nohlsearch<CR><CR>
+set ignorecase
 
 " Cursor line and column selected
 au WinLeave * set nocursorline nocursorcolumn
