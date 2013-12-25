@@ -37,6 +37,10 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
+" Specific identation settings to some file types 
+autocmd Filetype erb setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
 " Clipboard
 set guioptions+=a
 set clipboard=unnamedplus
