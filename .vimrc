@@ -85,6 +85,7 @@ nmap <leader>e :NERDTreeFind<CR>
 nmap <leader>ee :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
+let NERDTreeIgnore = ['\.pyc$']
 
 " NERDCommenter
 :nmap <leader>/ <Plug>NERDCommenterToggle
@@ -139,3 +140,4 @@ source <sfile>:h/.vim/statusbar.vim
 " (this file is ignored by Git).
 " Keep this line at the bottom of the file
 source <sfile>:h/.vimrc.local
+
