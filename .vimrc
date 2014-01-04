@@ -133,6 +133,11 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 se t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
+" prevents bold
+if !has('gui_running')
+    set t_md=
+endif
+
 
 source <sfile>:h/.vim/statusbar.vim
 
