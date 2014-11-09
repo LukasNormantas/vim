@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/vdebug"]
 	path = .vim/bundle/vdebug
 	url = git://github.com/joonty/vdebug.git
+[submodule ".vim/bundle/vim-hack.git"]
+	path = .vim/bundle/vim-hack.git
+	url = git://github.com/hhvm/vim-hack.git
