@@ -76,6 +76,8 @@ nmap <A-p> :CtrlPTag<CR>
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
 highlight clear SignColumn
+"nmap <Leader>ha <Plug>GitGutterStageHunk
+"nmap <Leader>hu <Plug>GitGutterRevertHunk
 
 " Fugitive
 nmap <leader>gb :Gblame<CR>
@@ -118,6 +120,10 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['java'] }
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers = ['jshint']
+let s:php_executable = "/usr/bin/php"
+let g:syntastic_php_checkers = ['php'] ", 'phpcs']
+let g:syntastic_php_phpcs_args = "--standard=PSR2 -n --report=csv"
+
 " When writing a file, if there are errors, have Syntastic plugin mark them
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
@@ -145,4 +151,4 @@ source <sfile>:h/.vim/statusbar.vim
 " (this file is ignored by Git).
 " Keep this line at the bottom of the file
 source <sfile>:h/.vimrc.local
-
+" DO NOT EDIT BELLOW THIS LINE!
