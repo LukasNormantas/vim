@@ -59,6 +59,15 @@ nmap <F12> :!ctags -R .<CR>
 " For specific filetypes:
 au BufRead,BufNewFile *.md set filetype=markdown
 
+" Quicker window movement
+ nnoremap <C-j> <C-w>j
+ nnoremap <C-k> <C-w>k
+ nnoremap <C-h> <C-w>h
+ nnoremap <C-l> <C-w>l
+
+" bind" Enable spellchecking for Markdown
+autocmd FileType markdown setlocal spell
+
 " Show buffer list
 :nnoremap <leader>b :buffers<CR>:buffer<Space>
 
@@ -117,7 +126,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Sytastic - do not compile java files on save
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'passive_filetypes': ['java'] }
+                           \ 'passive_filetypes': ['java', 'html'] }
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers = ['jshint']
 let s:php_executable = "/usr/bin/php"
