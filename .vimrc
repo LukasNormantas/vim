@@ -76,9 +76,10 @@ let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_by_filename=1
 let g:ctrlp_regexp=0
-let g:ctrlp_working_path_mode=1
+let g:ctrlp_working_path_mode=""
 let g:ctrlp_dotfiles=1
-let g:ctrlp_max_files=100000
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 let g:ctrlp_match_window_reversed=0
 nmap <A-p> :CtrlPTag<CR>
 
