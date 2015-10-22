@@ -43,7 +43,7 @@ set directory=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
 
 " Shortcut to rapidly toggle whitespaces
 nmap <leader>p :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:>-,eol:$
 
 " Generates ctags for all files
 nmap <F12> :!ctags -R .<CR>
