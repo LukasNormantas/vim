@@ -117,6 +117,8 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 " Sytastic - do not compile java files on save
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['java', 'html'] }
@@ -138,7 +140,7 @@ set noautochdir " To make sure no plugin changes CWD
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 
 " It is essential to export TERM=xterm-256color
-se t_Co=256
+set t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
 " prevents bold
