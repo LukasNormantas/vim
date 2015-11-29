@@ -24,11 +24,6 @@ syntax on
 nnoremap <CR> :nohlsearch<CR><CR>
 set ignorecase
 
-" Cursor line and column selected
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
-
 " Specific identation settings to some file types 
 autocmd Filetype erb setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
@@ -143,12 +138,20 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 set t_Co=256
 let g:solarized_termcolors=256
 set background=light
-colorscheme solarized
+colorscheme delek
+highlight Normal ctermfg=grey ctermbg=black
 " prevents bold
 if !has('gui_running')
     set t_md=
 endif
-
+" Cursor line and column selected
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=233 ctermfg=NONE
+hi CursorColumn   cterm=NONE ctermbg=233 ctermfg=NONE
+hi LineNr   cterm=NONE ctermbg=236 ctermfg=NONE
+hi SignColumn ctermbg=236
 
 source <sfile>:h/.vim/statusbar.vim
 
