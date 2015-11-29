@@ -142,6 +142,7 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 " It is essential to export TERM=xterm-256color
 set t_Co=256
 let g:solarized_termcolors=256
+set background=light
 colorscheme solarized
 " prevents bold
 if !has('gui_running')
