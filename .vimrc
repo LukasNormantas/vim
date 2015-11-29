@@ -102,7 +102,7 @@ nmap <leader>tt :TagbarToggle<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 
 " Toggle spell checking
-nmap <silent> <leader>s :set spell!<CR>
+nmap <silent> <leader>ss :set spell!<CR>
 set spelllang=en_us
 
 " Toggle line numbers
