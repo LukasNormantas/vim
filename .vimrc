@@ -134,12 +134,10 @@ set noautochdir " To make sure no plugin changes CWD
 " Prevents artefacts
 au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 
-" It is essential to export TERM=xterm-256color
+set background=dark
 set t_Co=256
-let g:solarized_termcolors=256
-set background=light
-colorscheme delek
-highlight Normal ctermfg=grey ctermbg=black
+"let g:solarized_termcolors=256
+colorscheme default
 " prevents bold
 if !has('gui_running')
     set t_md=
@@ -148,10 +146,11 @@ endif
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
-hi CursorLine   cterm=NONE ctermbg=233 ctermfg=NONE
-hi CursorColumn   cterm=NONE ctermbg=233 ctermfg=NONE
-hi LineNr   cterm=NONE ctermbg=236 ctermfg=NONE
-hi SignColumn ctermbg=236
+
+hi CursorLine   cterm=NONE ctermbg=8 ctermfg=NONE
+hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
+hi LineNr   cterm=NONE ctermbg=0 ctermfg=NONE
+hi SignColumn ctermbg=0
 
 source <sfile>:h/.vim/statusbar.vim
 
