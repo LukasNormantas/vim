@@ -24,7 +24,7 @@ syntax on
 nnoremap <CR> :nohlsearch<CR><CR>
 set ignorecase
 
-" Specific identation settings to some file types 
+" Specific identation settings to some file types
 autocmd Filetype erb setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 
@@ -152,10 +152,23 @@ hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
 hi LineNr   cterm=NONE ctermbg=0 ctermfg=NONE
 hi SignColumn ctermbg=0
 
-source <sfile>:h/.vim/statusbar.vim
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = "\uE0B0"
+let g:airline_right_sep = "\uE0B2"
+let g:airline_symbols.branch = "\uE0A0"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#enabled = 0
+let g:airline_section_c = '%{getcwd()}/%t'
+let g:airline_theme = 'term'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+set laststatus=2
 
 " Include config file with customizations for local environment
 " (this file is ignored by Git).
 " Keep this line at the bottom of the file
 source <sfile>:h/.vimrc.local
 " DO NOT EDIT BELLOW THIS LINE!
+
