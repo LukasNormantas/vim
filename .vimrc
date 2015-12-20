@@ -150,6 +150,7 @@ set cursorline cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=8 ctermfg=NONE
 hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
 hi LineNr   cterm=NONE ctermbg=0 ctermfg=NONE
+hi Visual cterm=NONE ctermbg=7 ctermfg=Black
 hi SignColumn ctermbg=0
 
 if !exists('g:airline_symbols')
@@ -160,8 +161,8 @@ let g:airline_right_sep = "\uE0B2"
 let g:airline_symbols.branch = "\uE0A0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#enabled = 0
-let g:airline_section_c = '%{getcwd()}'
-let g:airline_theme = 'sol'
+let g:airline_section_c = '%<%F'
+let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 set laststatus=2
