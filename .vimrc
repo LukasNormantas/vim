@@ -55,9 +55,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " bind" Enable spellchecking for Markdown
 autocmd FileType markdown setlocal spell
 
-" Show buffer list
-:nnoremap <leader>b :buffers<CR>:buffer<Space>
-
 " CtrlP setup
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP .'
@@ -69,6 +66,9 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_match_window_reversed=0
 nmap <A-p> :CtrlPTag<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+
+nmap <leader>ag :Ag<CR>
 
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
@@ -152,6 +152,8 @@ hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
 hi LineNr   cterm=NONE ctermbg=0 ctermfg=NONE
 hi Visual cterm=NONE ctermbg=7 ctermfg=Black
 hi SignColumn ctermbg=0
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
