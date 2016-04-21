@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-bufferline"]
 	path = .vim/bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline
+[submodule ".vim/bundle/conque-gdb"]
+	path = .vim/bundle/conque-gdb
+	url = https://github.com/vim-scripts/Conque-GDB
