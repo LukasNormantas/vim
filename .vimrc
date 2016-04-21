@@ -128,6 +128,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_javascript_jslint_conf = "--nomen --vars --plusplus"
 let g:syntastic_javascript_jshint_conf = "~/.vim/jshint-conf.js"
+let g:syntastic_perl_lib_path = '/usr/lib64/perl5/vendor_perl/5.20.2/x86_64-linux'
+let g:syntastic_cpp_include_dirs=['/usr/include/GL/']
 
 set noautochdir " To make sure no plugin changes CWD
 
@@ -145,13 +147,12 @@ endif
 " Cursor line and column selected
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+set cursorline nocursorcolumn
 
-hi CursorLine   cterm=NONE ctermbg=8 ctermfg=NONE
-hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
-hi LineNr   cterm=NONE ctermbg=0 ctermfg=NONE
+hi CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
+hi CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE
 hi Visual cterm=NONE ctermbg=7 ctermfg=Black
-hi SignColumn ctermbg=0
+hi SignColumn ctermbg=NONE
 hi clear SpellBad
 hi SpellBad cterm=underline
 
@@ -164,7 +165,7 @@ let g:airline_symbols.branch = "\uE0A0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_section_c = '%<%F'
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'kolor'
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 set laststatus=2
