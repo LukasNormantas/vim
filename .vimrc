@@ -66,7 +66,7 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_match_window_reversed=0
 nmap <A-p> :CtrlPTag<CR>
-nmap <leader>ww :CtrlPBuffer<CR>
+nmap <leader><tab> :CtrlPBuffer<CR>
 
 nmap <leader>ag :Ag<CR>
 
