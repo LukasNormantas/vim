@@ -138,8 +138,10 @@ au BufWritePost * :silent! :syntax sync fromstart<cr>:redraw!<cr>
 
 set background=dark
 set t_Co=256
-"let g:solarized_termcolors=256
-colorscheme default
+
+let g:hybrid_custom_term_colors = 1
+colorscheme hybrid
+
 " prevents bold
 if !has('gui_running')
     set t_md=
@@ -156,18 +158,6 @@ hi SignColumn ctermbg=NONE
 hi clear SpellBad
 hi SpellBad cterm=underline
 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_left_sep = "\uE0B0"
-let g:airline_right_sep = "\uE0B2"
-let g:airline_symbols.branch = "\uE0A0"
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#hunks#enabled = 0
-let g:airline_section_c = '%<%F'
-let g:airline_theme = 'kolor'
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
 set laststatus=2
 
 " Include config file with customizations for local environment
