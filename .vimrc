@@ -70,6 +70,9 @@ nmap <leader><tab> :CtrlPBuffer<CR>
 
 nmap <leader>ag :Ag<CR>
 
+" Sends text selected in visualmode to termbin
+xnoremap <leader>tb <esc>:'<,'>:w ! nc termbin.com 9999<CR>
+
 " Git Gutter
 nmap <leader>g :GitGutterToggle<CR>
 highlight clear SignColumn
