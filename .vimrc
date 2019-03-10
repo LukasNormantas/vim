@@ -23,6 +23,8 @@ set hlsearch
 syntax on
 nnoremap <CR> :nohlsearch<CR><CR>
 set ignorecase
+set modeline
+set modelines=5
 
 " Specific identation settings to some file types
 autocmd Filetype erb setlocal ts=2 sts=2 sw=2
